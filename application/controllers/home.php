@@ -14,6 +14,7 @@ class Home extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('news_model');  //与model的文件名相同，区分大小写
     }
 
     /**
@@ -21,7 +22,8 @@ class Home extends CI_Controller {
      */
     public function index()
     {
-        echo 'Hello World!';
+        //echo 'Hello World!';
+        var_dump($this->news_model); //与load时同名
     }
 
     /**
